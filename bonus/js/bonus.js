@@ -27,7 +27,7 @@ submitPalindrome.addEventListener("click", function(event){
     palindromicWord(wordInput);
 })
 
-let inputSelect = document.querySelector("#even-odd-select");//todo mettere required
+let inputSelect = document.querySelector("#even-odd-select");
 let inputNumber = document.querySelector("#even-odd-input");
 const submitEvenOdd = document.querySelector("#even-odd-button");
 let resultEvenOdd = document.querySelector("#even-odd-result");
@@ -39,6 +39,14 @@ submitEvenOdd.addEventListener("click", function(event){
     let numberInput =inputNumber.value;//Ottengo il valore dell'input
     
     function evenOdd(number){
+        if(selectInput !=0 && selectInput !=1){
+            resultEvenOdd.innerHTML = "Per favore effettua una scelta!";
+            setTimeout(function() {
+                resultEvenOdd.innerHTML = ""; // Pulisce il messaggio dopo 3 secondi
+            }, 3000);
+            return;
+        }
+        
         number = parseInt(number);//Trasforma il numero inserito da string a number
         if(isNaN(number) || number < 1 || number > 5){//Controlla se il numero è al di fuori del range da 1 a 5 e se è stato inserito accidentalmente un carattere/parola 
             resultEvenOdd.innerHTML = "Valore non corretto, Riprovare!";//alert se il num in input è minore di 1 o maggiore di 5
@@ -65,3 +73,5 @@ submitEvenOdd.addEventListener("click", function(event){
     }
     evenOdd(numberInput);
 })
+
+//todo Se metto un seTimeout su ogni "result" è meglio creare una funzione invece di ripeterlo n volte?
