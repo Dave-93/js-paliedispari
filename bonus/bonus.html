@@ -8,29 +8,29 @@
 </head>
 <body class="bg-success text-white">
     
-    <form class="m-3 p-2">
+    <form id="palindrome-form" class="m-3 p-2">
         <h2 class="mb-4 text-center text-danger text-decoration-underline">Palindroma Bonus</h2>
         <div class="mb-3">
             <label class="form-label px-1">Inserisci una Parola</label>
-            <input type="text" class="form-control bg-success-subtle" placeholder="Scrivi una parola">
+            <input type="text" id="palindrome-input" class="form-control bg-success-subtle" placeholder="Scrivi una parola">
         </div>
-        <button type="submit" class="btn btn-light border border-2 border-danger text-danger rounded-3 fw-bold">Verifica</button>
-        <p class="mt-4 fw-bold text-center text-white"></p>
+        <button type="submit" id="palindrome-button" class="btn btn-light border border-2 border-danger text-danger rounded-3 fw-bold">Verifica</button>
+        <p id="palindrome-result" class="mt-4 fw-bold text-center text-white"></p>
     </form>
     
-    <form class="m-3 p-2">
+    <form id="even-odd-form" class="m-3 p-2">
         <h2 class="mb-4 text-center text-danger text-decoration-underline">Pari e Dispari Bonus</h2>
-        <select class="form-select bg-success-subtle" aria-label="Default select example">
+        <select id="even-odd-select" class="form-select bg-success-subtle" aria-label="Default select example">
             <option selected class="d-none">Scegli un valore</option>
             <option value="1">Pari</option>
             <option value="2">Dispari</option>
         </select>
         <div class="mb-3">
             <label class="form-label mt-3 px-1">Inserisci un Numero da 1 a 5</label>
-            <input type="text" class="form-control bg-success-subtle" placeholder="Scrivi un numero">
+            <input type="text" id="even-odd-input" class="form-control bg-success-subtle" placeholder="Scrivi un numero">
         </div>
-        <button type="submit" class="btn btn-light border border-2 border-danger text-danger rounded-3 fw-bold">Tenta la Sorte</button>
-        <p class="mt-4 fw-bold text-center text-white"></p>   
+        <button type="submit" id="even-odd-button" class="btn btn-light border border-2 border-danger text-danger rounded-3 fw-bold">Tenta la Sorte</button>
+        <p id="even-odd-result" class="mt-4 fw-bold text-center text-white"></p>   
     </form>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
