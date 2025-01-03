@@ -40,14 +40,14 @@ submitEvenOdd.addEventListener("click", function(event){
     
     function evenOdd(number){
         if(selectInput !=0 && selectInput !=1){
-            resultEvenOdd.innerHTML = "Per favore effettua una scelta! &#129335;";
+            resultEvenOdd.innerHTML = "Per favore effettua una scelta!<br><img src='./img/retry.gif'>";
             timerEvenOddInputError();
             return;
         }
-        
+       
         number = parseInt(number);//Trasforma il numero inserito da string a number
         if(isNaN(number) || number < 1 || number > 5){//Controlla se il numero è al di fuori del range da 1 a 5 e se è stato inserito accidentalmente un carattere/parola 
-            resultEvenOdd.innerHTML = "Valore non corretto, Riprovare! &#129335;";//alert se il num in input è minore di 1 o maggiore di 5
+            resultEvenOdd.innerHTML = "Valore non corretto, Riprovare!<br><img src='./img/retry.gif'>";//alert se il num in input è minore di 1 o maggiore di 5
             timerEvenOddInputError();
             return;//In questo caso il return serve perchè ferma l'esecuzione del codice successivo
         }else{
@@ -61,10 +61,10 @@ submitEvenOdd.addEventListener("click", function(event){
             
             if(somma == selectInput){//Confronta il risultato con la scelta dell'utente fatta nel select
                                      //todo Ho fatto la comparazione con 2 = invece di 3 perchè sono di tipo differente(somma->number, selectImput->string) anche se il valore è lo stesso
-                resultEvenOdd.innerHTML = "CONGRATULAZIONI, HAI VINTO!!!  &#129321";
+                resultEvenOdd.innerHTML = "CONGRATULAZIONI, HAI VINTO!!!<br><img src='./img/win.gif'>";
                 timerEvenOddInputCorrect()
             }else{
-                resultEvenOdd.innerHTML = "MI DISPIACE, HAI PERSO...&#128531;";
+                resultEvenOdd.innerHTML = "MI DISPIACE, HAI PERSO...<br><img src='./img/lose.gif'>";
                 timerEvenOddInputCorrect()
             }
         }
