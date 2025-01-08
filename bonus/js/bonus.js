@@ -2,8 +2,8 @@ let inputWord = document.querySelector("#palindrome-input");
 const submitPalindrome = document.querySelector("#palindrome-button");
 let resultPalindrome = document.querySelector("#palindrome-result");
 
-submitPalindrome.addEventListener("click", function(event){
-    event.preventDefault();
+submitPalindrome.addEventListener("click", function(event){//todo callback function
+    event.preventDefault();//todo blocco comportamento standard
 
     let wordInput = inputWord.value;// Ottengo il valore dell'input
     function palindromicWord(word){
@@ -12,7 +12,7 @@ submitPalindrome.addEventListener("click", function(event){
         let arrayReverseWord =  arrayWord.reverse();//Crea una copia dell'array invertito  
         let reverseWord = arrayReverseWord.join("");//Trasforma l'array invertito in stringa 
         
-        if (!wordInput) {//controllo se l'utente non inserisce nulla(! viene usato per verificare se la variabile è "FALSY",se la stringa è vuota viene considerata "FALSY"...Quindi se l'utente non scrive nulla la condizione è VERA)
+        if ((!wordInput) || (!isNaN(wordInput))) {//controllo se l'utente non inserisce nulla o se inserisce numeri(! viene usato per verificare se la variabile è "FALSY",se la stringa è vuota viene considerata "FALSY"...Quindi se l'utente non scrive nulla la condizione è VERA)
             resultPalindrome.innerHTML = "Per favore inserisci una parola e riprova! &#129335;";
             timerPalindromeInputError()
             return;
